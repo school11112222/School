@@ -2,7 +2,7 @@
   <div>
     <el-container class="home-container">
       <el-header class="home-header">
-        <span class="home_title">微人事</span>
+        <span class="home_title">人事系统</span>
         <div style="display: flex;align-items: center;margin-right: 7px">
           <el-badge style="margin-right: 30px" :is-dot="this.$store.state.nfDot">
             <i class="fa fa-bell-o" @click="goChat" style="cursor: pointer"></i>
@@ -14,8 +14,8 @@
             style="width: 40px;height: 40px;margin-right: 5px;margin-left: 5px;border-radius: 40px"/></i>
   </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>个人中心</el-dropdown-item>
-              <el-dropdown-item>设置</el-dropdown-item>
+              <el-dropdown-item  divided @click.native="goDetails">个人中心</el-dropdown-item>
+             <!-- <el-dropdown-item>设置</el-dropdown-item>-->
               <el-dropdown-item command="logout" divided>注销</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
@@ -77,6 +77,9 @@
       },
       goChat(){
         this.$router.push({path: '/chat'});
+      },
+       goDetails(){
+        this.$router.push({path: '/details'});
       },
       devMsg(){
         this.$alert('为了确保所有的小伙伴都能看到完整的数据演示，数据库只开放了查询权限和部分字段的更新权限，其他权限都不具备，完整权限的演示需要大家在自己本地部署后，换一个正常的数据库用户后即可查看，这点请大家悉知!', '友情提示', {

@@ -98,7 +98,7 @@
                   聘用形式:
                   <el-radio-group v-model="emp.engageForm">
                     <el-radio label="劳动合同">劳动合同</el-radio>
-                    <el-radio style="margin-left: 15px" label="劳务合同">劳务合同</el-radio>
+                     <el-radio style="margin-left: 15px" label="劳务合同">劳务合同</el-radio>
                   </el-radio-group>
                 </el-col>
               </el-row>
@@ -282,9 +282,9 @@
                 <el-button @click="showEditEmpView(scope.row)" style="padding: 3px 4px 3px 4px;margin: 2px"
                            size="mini">编辑
                 </el-button>
-                <el-button style="padding: 3px 4px 3px 4px;margin: 2px" type="primary"
+               <!-- <el-button style="padding: 3px 4px 3px 4px;margin: 2px" type="primary"
                            size="mini">查看高级资料
-                </el-button>
+                </el-button>-->
                 <el-button type="danger" style="padding: 3px 4px 3px 4px;margin: 2px" size="mini"
                            @click="deleteEmp(scope.row)">删除
                 </el-button>
