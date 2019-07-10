@@ -33,6 +33,7 @@ public class SalaryController {
 
     @RequestMapping(value = "/salary", method = RequestMethod.GET)
     public List<Salary> salaries() {
+    	System.out.println(salaryService.getAllSalary());
         return salaryService.getAllSalary();
     }
 

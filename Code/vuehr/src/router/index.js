@@ -3,9 +3,10 @@ import Router from 'vue-router'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
 import Chat from '@/components/chat/Chat'
+import Details from '@/components/Details'
 // import EmpAdv from '@/components/emp/EmpAdv'
 // import EmpBasic from '@/components/emp/EmpBasic'
-// import PerEc from '@/components/personnel/PerEc'
+ //import PerEc from '@/components/personnel/PerEc'
 // import PerEmp from '@/components/personnel/PerEmp'
 // import PerMv from '@/components/personnel/PerMv'
 // import PerSalary from '@/components/personnel/PerSalary'
@@ -35,7 +36,8 @@ export default new Router({
       name: 'Login',
       component: Login,
       hidden: true
-    }, {
+    },
+     {
       path: '/home',
       name: '主页',
       component: Home,
@@ -53,7 +55,17 @@ export default new Router({
             keepAlive: false,
             requireAuth: true
           }
-        }
+        },
+        {
+          path: '/details',
+          name: '个人信息',
+          component: Details,
+          hidden: true,
+          meta: {
+            requireAuth: true
+          },
+         
+           }
       ]
     }
   ]
