@@ -8,9 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Created by sang on 2018/1/24.
- */
+
 @Service
 @Transactional
 public class SalaryService {
