@@ -17,9 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- * Created by sang on 2017/12/29.
- */
+
 @RestController
 @RequestMapping("/personal/pop")
 public class PersonalController {
